@@ -1,6 +1,6 @@
 # Maintainer: Goldy <goldy@devgoldy.xyz>
 pkgname=mov-cli
-pkgver="4.1.0"
+pkgver="4.1.6"
 pkgrel=1
 pkgdesc="Watch everything from your terminal."
 arch=("x86_64" "i686")
@@ -17,6 +17,7 @@ depends=(
 	"python-typer"
 	"python-inquirer"
 	"python-unidecode"
+	"python-deprecation"
 
 	"nano"
 	"mpv"
@@ -29,7 +30,7 @@ optdepends=(
 )
 checkdepends=()
 provides=("mov-cli")
-conflicts=("mov-cli")
+conflicts=("mov-cli-git")
 md5sums=("SKIP")
 source=(
 	"https://github.com/mov-cli/mov-cli/archive/refs/tags/$pkgver.zip"
