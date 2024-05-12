@@ -7,7 +7,7 @@ arch=("x86_64" "i686")
 url="https://github.com/mov-cli/mov-cli"
 license=("MIT")
 makedepends=(
-	"python-build" "python-setuptools-scm"
+	"python-build" "python-setuptools-scm" "python-pipx"
 )
 depends=(
 	"python"
@@ -47,5 +47,17 @@ build() {
 
 package() {
     cd $pkgname-$pkgver
-    python -m installer --destdir="$pkgdir" dist/*.whl
+	echo "uwu >> $pkgdir"
+
+	PIPX_BIN_DIR="$srcdir/pipx-bin" pipx install dist/*.whl
+
+	mkdir -p $pkgdir/$HOME/.local/bin/
+	mkdir -p $pkgdir/$HOME/.local/share/pipx/venvs/$pkgname
+
+	cp $srcdir/pipx-bin/mov-cli $pkgdir/$HOME/.local/bin/mov-cli
+	cp -r $srcdir/pipx-home/venvs/$pkgname $pkgdir/$HOME/.local/share/pipx/venvs/$pkgname
+}
+
+pre_remove() {
+    pipx uninstall mov-cli
 }
