@@ -2,7 +2,7 @@ install:
 	makepkg -si
 
 uninstall:
-	sudo pacman -Rs python-mov-cli-ms
+	sudo pacman -Rs python-mov-cli-youtube
 
 clean:
 	rm -r ./pkg
