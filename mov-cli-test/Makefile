@@ -5,9 +5,10 @@ uninstall:
 	sudo pacman -Rs python-mov-cli-test
 
 clean:
+	rm .SRCINFO
 	rm -r ./pkg
 	sudo rm -r ./src
 	rm ./*.pkg.tar.zst
 
-srcinfo:
+src-info:
 	makepkg --printsrcinfo > .SRCINFO
