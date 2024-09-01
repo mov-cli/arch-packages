@@ -2,7 +2,7 @@ install:
 	makepkg -si
 
 uninstall:
-	sudo pacman -Rs python-mov-cli-ms
+	sudo pacman -Rs python-mov-cli-jellyplex
 
 clean:
 	rm .SRCINFO
@@ -15,4 +15,4 @@ src-info:
 
 init-repo:
 	git -c init.defaultBranch=master init
-	git remote add aur ssh://aur@aur.archlinux.org/python-mov-cli-youtube.git
+	git remote add aur ssh://aur@aur.archlinux.org/python-mov-cli-jellyplex.git

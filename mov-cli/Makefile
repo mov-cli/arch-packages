@@ -15,4 +15,4 @@ src-info:
 
 init-repo:
 	git -c init.defaultBranch=master init
-	git remote add aur ssh://aur@aur.archlinux.org/python-mov-cli-youtube.git
+	git remote add aur ssh://aur@aur.archlinux.org/mov-cli.git

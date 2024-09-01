@@ -4,7 +4,7 @@
 - [python-mov-cli-test](https://aur.archlinux.org/packages/python-mov-cli-test)
 - [python-mov-cli-youtube](https://aur.archlinux.org/packages/python-mov-cli-youtube)
 - [python-mov-cli-files](https://aur.archlinux.org/packages/python-mov-cli-files)
-- [python-mov-cli-ms](https://aur.archlinux.org/packages/python-mov-cli-ms)
+- [python-mov-cli-jellyplex](https://aur.archlinux.org/packages/python-mov-cli-jellyplex)
 
 ## How to publish to AUR. *(for future maintainers)*
 
