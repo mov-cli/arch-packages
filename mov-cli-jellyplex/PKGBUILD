@@ -1,26 +1,28 @@
-# Maintainer: Ananas <ananas@r3tr0ananas.pro>
+# Maintainer: Ananas <ananas@ananas.moe>
 # Maintainer: Goldy <goldy@devgoldy.xyz>
-_pkgname=mov-cli-media-server
-pkgname=python-mov-cli-ms
-pkgver="1.0.0"
+_pkgname=mov-cli-jellyplex
+pkgname=python-mov-cli-jellyplex
+pkgver="1.1.3"
 pkgrel=1
-pkgdc="A mov-cli v4 plugin for watching files on your device."
+pkgdesc="A mov-cli v4 plugin for watching content from a media server hosting jellyfin or plex."
 arch=("x86_64" "i686")
-url="https://github.com/mov-cli/mov-cli-media-server"
+url="https://github.com/mov-cli/mov-cli-jellyplex"
 license=("MIT")
 makedepends=(
-	"python-build" "python-wheel"
+	"python-build" "python-wheel" "python-installer"
 )
 depends=(
 	"python"
+	"python-plexapi"
+	"mov-cli"
 )
 optdepends=()
 checkdepends=()
-provides=("mov-cli-ms")
+provides=("mov-cli-jellyplex")
 conflicts=()
 md5sums=("SKIP")
 source=(
-	"${pkgname}-${pkgver}.zip::https://github.com/mov-cli/mov-cli-media-server/archive/refs/tags/$pkgver.zip"
+	"${pkgname}-${pkgver}.zip::https://github.com/mov-cli/mov-cli-jellyplex/archive/refs/tags/$pkgver.zip"
 )
 
 build() {
